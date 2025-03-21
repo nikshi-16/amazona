@@ -15,6 +15,8 @@ type ToastStore = {
   toast: (toast: Omit<Toast, "id">) => void
   removeToast: (id: string) => void
 }
+export const toast = (toast: Omit<Toast, "id">) => useToast.getState().toast(toast);
+
 
 export const useToast = create<ToastStore>((set) => ({
   toasts: [],
