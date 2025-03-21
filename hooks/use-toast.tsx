@@ -5,7 +5,7 @@ import { create } from "zustand"
 type Toast = {
   id: string
   title?: string
-  description: string
+  description?: string
   variant?: "default" | "destructive"
   action?: React.ReactNode
 }
